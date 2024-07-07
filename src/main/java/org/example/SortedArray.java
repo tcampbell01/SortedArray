@@ -9,7 +9,10 @@
 //
 ///////////////////////////////// CITATIONS ////////////////////////////////////
 //
-// None
+// Consulted ChatGPT for this line of code:
+// while (i < nums.length - 1 && nums[i] == nums[i + 1]) {
+//                i++;
+//            }
 //
 //
 //
@@ -20,7 +23,7 @@
 //
 /////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
 
-package org.example;
+//package org.example;
 
 /**
  * This class contains a method to determine the order of elements in an array,
@@ -41,10 +44,15 @@ public class SortedArray {
         boolean descending = true;
 
         for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] < nums[i + 1] || nums[i] == nums[i + 1]) {
-                descending = false;
-            } else if (nums[i] > nums[i + 1]) {
-                ascending = false;
+            while (i < nums.length - 1 && nums[i] == nums[i + 1]) {
+                i++;
+            }
+            if (i < nums.length - 1) {
+                if (nums[i] < nums[i + 1]) {
+                    descending = false;
+                } else if (nums[i] > nums[i + 1]) {
+                    ascending = false;
+                }
             }
         }
 
@@ -53,7 +61,7 @@ public class SortedArray {
         } else if (descending) {
             return "Descending";
         } else {
-            return "Not Sorted";
+            return "Not sorted";
         }
     }
 
@@ -78,5 +86,9 @@ public class SortedArray {
         // Test equal example.
         int[] nums4 = {6, 6, 6};
         System.out.println(findOrder(nums4)); // Output: Ascending
+
+        // Test another descending example.
+//        int[] nums5 = {10, 10, 9, 9, 9, 9, 8, 8, 7, 6, 5};
+//        System.out.println(findOrder(nums5)); // Output: Descending
     }
 }

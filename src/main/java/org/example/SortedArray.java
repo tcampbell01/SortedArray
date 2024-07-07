@@ -1,6 +1,6 @@
 ///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
 //
-// Title:           Weekly Averages
+// Title:           Sorted Array
 // Course:          CS 200, Summer 2024
 //
 // Author:          Teresa Campbell
@@ -9,19 +9,14 @@
 //
 ///////////////////////////////// CITATIONS ////////////////////////////////////
 //
-// I used ChatGPT to figure out how to use Junit
+// None
 //
 //
 //
 //
 ///////////////////////////////// REFLECTION ///////////////////////////////////
 //
-// 1. Describe the problem you wrote the program to solve: This app takes in the
-// high temperatures for the last 7 days and outputs the weekly average.
-// 2. What are the biggest challenges you encountered: I thought the testing was
-// tricky.  I wanted to use junit because this is what we use often at optum and
-// I wanted experience setting up the tests using junit.
-// 3. What did you learn from this assignment: How to use junit for testing.
+//
 //
 /////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
 
@@ -38,7 +33,8 @@ public class SortedArray {
      * Determines the order of elements in an array.
      *
      * @param nums Array of integer values.
-     * @return A string indicating if the array is "Ascending", "Descending", or "Not Sorted".
+     * @return A string indicating if the array is "Ascending",
+     * "Descending", or "Not Sorted".
      */
     public static String findOrder(int[] nums) {
         boolean ascending = true;
